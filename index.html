@@ -1,126 +1,74 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#240616">
-  <meta name="description" content="Ciera's Bar Menu — a festive Diwali cocktail menu.">
-  <title>Ciera's Bar Menu | Diwali Celebration</title>
-  <style>
-    :root {
-      --wine: #240616;
-      --wine2: #3a0b20;
-      --gold: #e9b84f;
-      --cream: #fff3d2;
-      --muted: #e8d6b6;
-    }
-    * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body {
-      margin: 0;
-      color: var(--cream);
-      background:
-        radial-gradient(ellipse at 50% 0%, rgba(145, 54, 48, .38), transparent 42%),
-        linear-gradient(145deg, #16040f, var(--wine) 55%, #12030b);
-      font-family: Georgia, "Times New Roman", serif;
-    }
-    .page {
-      min-height: 100vh;
-      padding: 38px 20px 64px;
-      overflow: hidden;
-    }
-    header { text-align: center; margin: 0 auto 30px; max-width: 900px; }
-    .eyebrow {
-      color: var(--gold); text-transform: uppercase; letter-spacing: .28em;
-      font: 600 12px/1.5 Arial, sans-serif;
-    }
-    h1 {
-      margin: 10px 0 8px; color: var(--gold);
-      font-size: clamp(42px, 8vw, 76px); line-height: 1;
-      font-style: italic; text-shadow: 0 3px 22px rgba(233,184,79,.22);
-    }
-    .subtitle { color: var(--muted); font-size: 17px; margin: 0; }
-    .ornament { color: var(--gold); letter-spacing: .45em; margin-top: 18px; }
-    main {
-      width: min(1100px, 100%); margin: 0 auto;
-      display: grid; grid-template-columns: minmax(280px, .95fr) minmax(300px, 1.05fr);
-      gap: clamp(24px, 5vw, 58px); align-items: start;
-    }
-    .poster-frame {
-      padding: 10px; border: 1px solid rgba(233,184,79,.7);
-      border-radius: 18px; background: rgba(255,255,255,.035);
-      box-shadow: 0 18px 55px rgba(0,0,0,.4);
-    }
-    .poster-frame img { display: block; width: 100%; height: auto; border-radius: 10px; }
-    .menu-panel {
-      border: 1px solid rgba(233,184,79,.55); border-radius: 18px;
-      padding: clamp(22px, 4vw, 38px);
-      background: linear-gradient(160deg, rgba(73,13,38,.92), rgba(28,5,18,.96));
-      box-shadow: 0 18px 55px rgba(0,0,0,.28);
-    }
-    h2 { color: var(--gold); font-size: 30px; font-style: italic; margin: 0 0 8px; }
-    .intro { color: var(--muted); margin: 0 0 22px; line-height: 1.5; }
-    .drinks { list-style: none; margin: 0; padding: 0; }
-    .drinks li {
-      display: flex; align-items: baseline; gap: 14px;
-      padding: 12px 0; border-bottom: 1px solid rgba(233,184,79,.2);
-      font-size: clamp(17px, 2vw, 20px);
-    }
-    .drinks li:last-child { border-bottom: 0; }
-    .number { color: var(--gold); font: 12px Arial, sans-serif; min-width: 22px; }
-    .drink-name { flex: 1; }
-    .tagline {
-      margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(233,184,79,.35);
-      color: var(--gold); text-align: center; font-style: italic; font-size: 18px;
-    }
-    footer { text-align: center; color: #c9ad87; font: 12px Arial, sans-serif; margin: 34px auto 0; letter-spacing: .08em; }
-    @media (max-width: 760px) {
-      .page { padding: 28px 15px 42px; }
-      main { grid-template-columns: 1fr; max-width: 560px; }
-      .poster-frame { max-width: 480px; margin: 0 auto; }
-    }
-    @media print {
-      body { background: #fff; color: #210714; }
-      .page { padding: 0; }
-      .poster-frame, .menu-panel { box-shadow: none; break-inside: avoid; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#17070d">
+<meta name="description" content="Explore Ciera's Bar Menu — signature cocktails, classics, and festive pours.">
+<title>Ciera's Bar Menu | A Little Sparkle in Every Sip</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#17070d;--wine:#3b101f;--wine2:#5a182b;--gold:#e7c47b;--cream:#fff6e8;--muted:#cdbbb4;--line:rgba(231,196,123,.25)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--ink);color:var(--cream);font-family:"DM Sans",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 44px));margin:auto}
+.topline{height:4px;background:linear-gradient(90deg,#8c4b26,var(--gold),#fff0bf,var(--gold),#8c4b26)}
+header{position:absolute;top:4px;left:0;right:0;z-index:5;border-bottom:1px solid rgba(255,255,255,.12);background:linear-gradient(180deg,rgba(15,4,9,.72),transparent)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between}.brand{font-family:"Cormorant Garamond",serif;font-size:30px;letter-spacing:1.5px}.brand span{color:var(--gold)}.navlinks{display:flex;gap:30px;align-items:center;font-size:12px;letter-spacing:1.8px;text-transform:uppercase;color:#f4e8dd}.navlinks a:hover{color:var(--gold)}.nav-cta{border:1px solid var(--gold);padding:12px 18px;color:var(--gold)}
+.hero{min-height:720px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 72% 46%,rgba(128,35,61,.48),transparent 38%),linear-gradient(110deg,#17070d 5%,#2a0c17 55%,#17070d)}.hero:before,.hero:after{content:"";position:absolute;border:1px solid rgba(231,196,123,.18);border-radius:50%;width:600px;height:600px;right:-140px;top:70px;box-shadow:0 0 0 35px rgba(231,196,123,.025),0 0 0 75px rgba(231,196,123,.02)}.hero:after{width:420px;height:420px;right:-50px;top:160px}.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:60px;align-items:center;padding-top:95px;padding-bottom:55px}.eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:11px;font-weight:700}.hero h1{font-family:"Cormorant Garamond",serif;font-weight:500;font-size:clamp(58px,7vw,94px);line-height:.91;margin:22px 0}.hero h1 em{color:var(--gold);font-style:italic}.hero p{color:#e1cbc6;max-width:480px;line-height:1.8;font-size:15px}.hero-actions{display:flex;gap:14px;margin-top:32px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 23px;font-size:11px;letter-spacing:1.8px;text-transform:uppercase;font-weight:700;transition:.25s}.btn-gold{background:var(--gold);color:#271019}.btn-gold:hover{background:#f5d99c;transform:translateY(-2px)}.btn-outline{border:1px solid rgba(231,196,123,.6);color:var(--gold)}.btn-outline:hover{background:rgba(231,196,123,.1)}.hero-art{position:relative;max-width:440px;margin:auto}.hero-art img{width:100%;display:block;border:1px solid rgba(231,196,123,.45);padding:9px;background:rgba(255,255,255,.04);box-shadow:0 25px 80px #090207;transform:rotate(2deg)}.seal{position:absolute;bottom:-23px;left:-25px;width:110px;height:110px;border-radius:50%;background:var(--gold);color:#35111d;display:grid;place-items:center;text-align:center;font-family:"Cormorant Garamond",serif;font-size:19px;line-height:1.05;transform:rotate(-12deg);box-shadow:0 8px 30px #10040a}
+.marquee{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:17px 0;overflow:hidden;background:#210a13;color:var(--gold);font-family:"Cormorant Garamond",serif;font-size:22px;letter-spacing:3px;text-align:center}.marquee span{padding:0 24px}.marquee b{font-family:serif;font-size:13px}
+section{padding:100px 0}.section-head{text-align:center;margin-bottom:48px}.section-head .eyebrow{font-size:10px}.section-head h2{font-family:"Cormorant Garamond",serif;font-size:clamp(42px,5vw,62px);font-weight:500;margin:12px 0}.section-head p{color:var(--muted);font-size:14px;line-height:1.7;max-width:560px;margin:auto}
+.menu-section{background:linear-gradient(180deg,#1b080f,#260b16 50%,#1b080f)}.menu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}.menu-card{border:1px solid var(--line);padding:27px 30px;background:linear-gradient(135deg,rgba(255,255,255,.045),rgba(255,255,255,.012));position:relative;transition:.25s}.menu-card:hover{border-color:rgba(231,196,123,.65);transform:translateY(-4px);background:rgba(255,255,255,.055)}.menu-card:before{content:"✦";position:absolute;right:25px;top:20px;color:rgba(231,196,123,.45)}.category{font-size:10px;letter-spacing:3px;color:var(--gold);text-transform:uppercase}.menu-card h3{font-family:"Cormorant Garamond",serif;font-size:29px;font-weight:500;margin:10px 0 7px}.menu-card p{color:var(--muted);font-size:13px;line-height:1.6;margin:0;max-width:420px}
+.feature{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.feature-visual{min-height:430px;position:relative;background:radial-gradient(circle at 50% 45%,#7b2d3f,#2c0d19 60%,#17070d);border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}.feature-visual:before{content:"";position:absolute;width:320px;height:320px;border:1px solid rgba(231,196,123,.4);border-radius:50%;box-shadow:0 0 0 22px rgba(231,196,123,.04),0 0 0 55px rgba(231,196,123,.03)}.glass{font-size:130px;filter:drop-shadow(0 22px 18px rgba(0,0,0,.4));position:relative;z-index:1}.feature-copy h2{font:500 clamp(42px,5vw,60px)/.98 "Cormorant Garamond",serif;margin:16px 0}.feature-copy p{color:var(--muted);line-height:1.8;font-size:14px}.feature-note{border-left:2px solid var(--gold);padding:4px 0 4px 17px;margin-top:28px;color:#f3dfbd;font-family:"Cormorant Garamond",serif;font-size:21px;font-style:italic}
+.about{background:#f6ead8;color:#29111a}.about .section-head p{color:#755b5d}.about-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.about-tile{border:1px solid rgba(59,16,31,.18);padding:28px;text-align:center}.about-tile .symbol{font-size:27px;color:#8a4a36}.about-tile h3{font:600 25px "Cormorant Garamond",serif;margin:13px 0 7px}.about-tile p{font-size:12px;line-height:1.7;color:#755b5d;margin:0}
+footer{padding:55px 0 28px;background:#100409;text-align:center}.footer-brand{font:500 38px "Cormorant Garamond",serif}.footer-brand span{color:var(--gold)}footer p{color:#a99391;font-size:12px;letter-spacing:1px}footer .footline{height:1px;background:var(--line);margin:30px auto;max-width:500px}.tiny{font-size:10px;color:#806c70}
+@media(max-width:760px){.nav{height:70px}.navlinks{gap:13px;font-size:9px}.navlinks a:nth-child(2){display:none}.brand{font-size:25px}.nav-cta{padding:9px 11px}.hero{min-height:auto}.hero-grid{grid-template-columns:1fr;gap:40px;padding-top:140px;padding-bottom:75px}.hero-copy{text-align:center}.hero-copy p{margin:auto}.hero-actions{justify-content:center}.hero-art{max-width:320px}.seal{width:85px;height:85px;font-size:16px;left:-12px}.menu-grid,.feature{grid-template-columns:1fr}.feature{gap:35px}.feature-visual{min-height:330px}.about-grid{grid-template-columns:1fr}.section-head{margin-bottom:35px}section{padding:75px 0}.marquee{font-size:17px}}
+@media(max-width:420px){.wrap{width:min(100% - 30px,1160px)}.navlinks{gap:9px}.navlinks a{letter-spacing:1px}.nav-cta{font-size:9px}.menu-card{padding:23px}.hero h1{font-size:58px}}
+</style>
 </head>
 <body>
-  <div class="page">
-    <header>
-      <div class="eyebrow">A little sparkle • A little spice • A lot to celebrate</div>
-      <h1>Ciera's Bar Menu</h1>
-      <p class="subtitle">Raise a glass and celebrate the Festival of Lights</p>
-      <div class="ornament" aria-hidden="true">✦ ✧ ✦</div>
-    </header>
-
-    <main>
-      <section class="poster-frame" aria-label="Diwali cocktail menu poster">
-        <img src="assets/cieras-diwali-bar-menu.png"
-             alt="Ciera's Bar Menu Diwali poster with cocktail illustrations and festive diya decorations">
-      </section>
-
-      <section class="menu-panel" aria-labelledby="cocktails-heading">
-        <h2 id="cocktails-heading">The Cocktail List</h2>
-        <p class="intro">Festive favorites, colorful pours, and something special from the bartender.</p>
-        <ol class="drinks">
-          <li><span class="number">01</span><span class="drink-name">Whiskey 'Ol Fashion</span></li>
-          <li><span class="number">02</span><span class="drink-name">Margarita</span></li>
-          <li><span class="number">03</span><span class="drink-name">Espresso Martini</span></li>
-          <li><span class="number">04</span><span class="drink-name">Pinacolato</span></li>
-          <li><span class="number">05</span><span class="drink-name">Blue Hawaiian</span></li>
-          <li><span class="number">06</span><span class="drink-name">Mohito</span></li>
-          <li><span class="number">07</span><span class="drink-name">Paloma</span></li>
-          <li><span class="number">08</span><span class="drink-name">Cranberry Spritzer</span></li>
-          <li><span class="number">09</span><span class="drink-name">Strawberry Daiquiri</span></li>
-          <li><span class="number">10</span><span class="drink-name">Bartender Special</span></li>
-        </ol>
-        <div class="tagline">Cheers to Diwali!</div>
-      </section>
-    </main>
-
-    <footer>CIERA'S BAR MENU &nbsp; • &nbsp; CELEBRATE BRIGHTLY</footer>
+<div class="topline"></div>
+<header><div class="wrap nav">
+  <a class="brand" href="#home">CIERA'S <span>✦</span></a>
+  <nav class="navlinks"><a href="#menu">The Menu</a><a href="#story">The Experience</a><a href="#featured">Signature Sip</a><a class="nav-cta" href="#menu">Explore Drinks</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div class="hero-copy"><div class="eyebrow">A festive pour · A memorable night</div>
+    <h1>A Little<br><em>Sparkle</em> in<br>Every Sip.</h1>
+    <p>Welcome to Ciera's Bar Menu — where good company meets beautiful cocktails. Explore a handpicked mix of timeless favorites, refreshing classics, and a little festive magic.</p>
+    <div class="hero-actions"><a class="btn btn-gold" href="#menu">Discover the Menu</a><a class="btn btn-outline" href="#featured">Meet the Signature</a></div>
   </div>
-</body>
-</html>
+  <div class="hero-art"><img src="assets/cieras-diwali-bar-menu.png" alt="Ciera's festive Diwali cocktail menu poster"><div class="seal">Cheers<br>to the<br>occasion</div></div>
+</div></section>
+<div class="marquee"><span>GOOD DRINKS</span><b>✦</b><span>GREAT COMPANY</span><b>✦</b><span>GOLDEN MOMENTS</span><b>✦</b><span>GOOD DRINKS</span></div>
+<section class="menu-section" id="menu"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">Made for the moment</div><h2>The Cocktail Collection</h2><p>From bold and spirited to bright and refreshing, there's a little something for every kind of celebration.</p></div>
+  <div class="menu-grid">
+    <article class="menu-card"><div class="category">The classics</div><h3>Whiskey 'Ol Fashion</h3><p>Rich, smooth, and timeless — a beautifully balanced classic.</p></article>
+    <article class="menu-card"><div class="category">Bright & citrusy</div><h3>Margarita</h3><p>A lively citrus favorite with a refreshing, spirited finish.</p></article>
+    <article class="menu-card"><div class="category">After dark</div><h3>Espresso Martini</h3><p>Deep coffee character meets a silky, elegant cocktail.</p></article>
+    <article class="menu-card"><div class="category">Tropical escape</div><h3>Pinacolato</h3><p>A creamy tropical treat with vacation-in-a-glass energy.</p></article>
+    <article class="menu-card"><div class="category">Island mood</div><h3>Blue Hawaiian</h3><p>A vibrant blue tropical pour made for carefree celebrations.</p></article>
+    <article class="menu-card"><div class="category">Fresh & minty</div><h3>Mohito</h3><p>Cool mint and bright lime make this one refreshingly easy.</p></article>
+    <article class="menu-card"><div class="category">Crisp & refreshing</div><h3>Paloma</h3><p>A sparkling citrus-inspired favorite with a sunny finish.</p></article>
+    <article class="menu-card"><div class="category">Zero-proof friendly</div><h3>Cranberry Spritzer</h3><p>Bright cranberry with a bubbly finish — festive and refreshing.</p></article>
+    <article class="menu-card"><div class="category">Berry sweet</div><h3>Strawberry Daiquiri</h3><p>Sweet strawberry flavor with a lively, fruit-forward finish.</p></article>
+    <article class="menu-card"><div class="category">A surprise pour</div><h3>Bartender Special</h3><p>Let the bartender create something special just for you.</p></article>
+  </div>
+</div></section>
+<section id="featured"><div class="wrap feature">
+  <div class="feature-visual"><div class="glass">🍸</div></div>
+  <div class="feature-copy"><div class="eyebrow">A toast to good times</div><h2>Find your<br><em>favorite pour.</em></h2><p>Whether you reach for a familiar classic or try something new, every drink is an invitation to slow down, raise a glass, and enjoy the moment.</p><div class="feature-note">“The best nights are made of little moments.”</div></div>
+</div></section>
+<section class="about" id="story"><div class="wrap">
+  <div class="section-head"><div class="eyebrow">The Ciera's touch</div><h2>More Than a Drink</h2><p>A thoughtfully curated bar menu for a night filled with laughter, warmth, and memories worth keeping.</p></div>
+  <div class="about-grid">
+    <div class="about-tile"><div class="symbol">✧</div><h3>Something for Everyone</h3><p>Classic, tropical, fruity, and refreshing choices for every taste.</p></div>
+    <div class="about-tile"><div class="symbol">❋</div><h3>Made to Celebrate</h3><p>Festive flavors and beautiful pours set the mood for a special occasion.</p></div>
+    <div class="about-tile"><div class="symbol">♡</div><h3>Best Served Together</h3><p>Good drinks are even better when shared with great company.</p></div>
+  </div>
+</div></section>
+</main>
+<footer><div class="wrap"><div class="footer-brand">CIERA'S <span>✦</span> BAR MENU</div><p>A LITTLE SPARKLE IN EVERY SIP</p><div class="footline"></div><div class="tiny">PLEASE ENJOY RESPONSIBLY · THANK YOU FOR CELEBRATING WITH US</div></div></footer>
+</body></html>
